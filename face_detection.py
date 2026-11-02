@@ -49,7 +49,7 @@ def detecter_visages(image, net, seuil_confiance=0.5):
             startX, startY = max(0, startX), max(0, startY)
             endX, endY = min(w, endX), min(h, endY)
 
-            liste_coordonnees.append((startX, startY, endX, endY))
+            liste_coordonnees.append((int(startX), int(startY), int(endX), int(endY)))
 
     return liste_coordonnees
 
